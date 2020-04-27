@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Caserita Perú - Inicio de Sesión</title>
+</head>
+<body>
+	<form th:action="@{/loginCheck}" method="POST">
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+		<div th:if="${error != null}"> Usuario Invalido</div>
+		<div th:if="${logout != null}"> Ingreso correcto!!</div>
+		<h2>Sign in</h2>
+		
+		<label for="username" >Usuario</label> 
+			<input type="text" id="username" name="username"
+				placeholder="Username" /> 
+		<label for="password">Contraseña</label>
+			<input type="password" id="password"  name="password"
+				placeholder="Password" />
+		<button type="submit">
+			<span aria-hidden="true"></span>
+			Sign in
+		</button>
+	</form>
+
+</body>
+</html>
