@@ -2,14 +2,120 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
-<title>Principal</title>
+<title>caserita Perú</title>
+<link rel="stylesheet" href="../CSS/estilos2.css"
+	th:href="@{/css/estilos2.css}">
 </head>
 <body>
-	<h1>Principal</h1>
+	<header class="main-header">
+		<div class="container container--flex">
+			<div class="logo-container column column--33">
+				<h1 class="logo">CASERITA PERU</h1>
+			</div>
 
-	<form th:action="@{/logout}" method="POST">
-		<button type="submit">  Cerrar Sesión
-		</button>
-	</form>
+		</div>
+
+		<div class="main-header__infousuario column column--50">
+			<span>Bienvenido:</span><br /> <span th:text="${usuario}">Nombre de Usuario</span>
+		</div>
+
+	</header>
+
+	<div class="linea_roja">
+
+		<div class="main-header__busqueda column column--50">
+			<div class="barra_buscador" method="get" action="" target="_blank">
+				<input type="search" name="buscar" placeholder="Encuentra tu receta"
+					autofocus required> <input type="submit" value="Buscar">
+			</div>
+		</div>
+
+	</div>
+
+	<nav class="main-nav">
+		<div class="container container--flex">
+			<ul class="menu" id="btnmenu">
+				<li class="menu__item"><a href="" class="menu__link">Recetas</a>
+					<ul>
+						<li><a href="">Entradas</a></li>
+						<li><a href="">Sopas</a></li>
+						<li><a href="">Plato principal</a></li>
+						<li><a href="">Postre</a></li>
+					</ul></li>
+				<li class="menu__item"><a href="" class="menu__link">Preguntas</a></li>
+				<li class="menu__item"><a href="" class="menu__link">Consejos</a></li>
+				<li class="menu__item"><a href="" class="menu__link">Cerrar
+						Sesi&oacute;n</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section class="banner">
+		<img src="../Imagenes/banner.jpg" th:src="@{/imgs/banner.jpg}" alt="" class="banner__img">
+		<div class="banner__content">Bienvenido a tu recetario favorito</div>
+	</section>
+
+	<main class="main">
+	<section class="group group--color">
+		<div class="container">
+			<h2 class="main__title">Los mejores platos que puedes encontrar</h2>
+			<p class="main__txt">Tambi&eacute;n puedes compartir tu propias
+				recetas</p>
+		</div>
+	</section>
+
+	<section class="group main__about__description">
+		<div class="container container--flex" id="plato_ganador">
+			<div class="column column--50">
+				<img src="../Imagenes/mejor_plato.jpg" th:src="@{/imgs/mejor_plato.jpg}" alt="">
+			</div>
+
+			<div class="column column--50">
+				<h3 class="column__title">El plato m&aacute;s votado es:</h3>
+				<p class="column__txt">Arroz con Pollo</p>
+				<a href="" class="btn btn--ver">Ver plato</a>
+			</div>
+		</div>
+	</section>
+	</main>
+
+	<section class="group mejores_categoria">
+		<h2 class="mejores_categoria__title_principal">Mejores por
+			Categor&iacute;a</h2>
+		<div class="container container--flex">
+			<div class="column column--50-25">
+				<img src="../Imagenes/entrada_1.jpg" th:src="@{/imgs/entrada_1.jpg}" alt=""
+					class="mejores_categoria__img">
+				<div class="mejores_categoria__title">La entrada m&aacute;s
+					votada</div>
+				<div class="mejores_categoria__name">Causa Rellena</div>
+				<a href="" class="btn btn--ver">Ver plato</a>
+			</div>
+			<div class="column column--50-25">
+				<img src="../Imagenes/sopa1.jpg" th:src="@{/imgs/sopa1.jpg}" alt=""
+					class="mejores_categoria__img">
+				<div class="mejores_categoria__title">La sopa m&aacute;s
+					votada</div>
+				<div class="mejores_categoria__name">Chupe de Camarones</div>
+				<a href="" class="btn btn--ver">Ver plato</a>
+			</div>
+			<div class="column column--50-25">
+				<img src="../Imagenes/principal_1.jpg"  th:src="@{/imgs/principal_1.jpg}"  alt=""
+					class="mejores_categoria__img">
+				<div class="mejores_categoria__title">El plato principal
+					m&aacute;s votado</div>
+				<div class="mejores_categoria__name">Arroz con Pollo</div>
+				<a href="" class="btn btn--ver">Ver plato</a>
+			</div>
+			<div class="column column--50-25">
+				<img src="../Imagenes/postre_1.jpg" th:src="@{/imgs/postre_1.jpg}"  alt=""
+					class="mejores_categoria__img">
+				<div class="mejores_categoria__title">El postre m&aacute;s
+					votado</div>
+				<div class="mejores_categoria__name">Crema Volteada</div>
+				<a href="" class="btn btn--ver">Ver plato</a>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

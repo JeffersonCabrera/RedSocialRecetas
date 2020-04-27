@@ -3,25 +3,62 @@
 <head>
 <meta charset="utf-8" />
 <title>Caserita Perú - Inicio de Sesión</title>
+<link rel="stylesheet" href="CSS/estilo.css"
+	th:href="@{/css/estilo.css}" />
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<link rel="stylesheet" href="css/iconos.css" th:href="@{/css/iconos.css}" />
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	   th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+ 
 </head>
 <body>
-	<form th:action="@{/loginCheck}" method="POST">
-		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-		<div th:if="${error != null}"> Usuario Invalido</div>
-		<div th:if="${logout != null}"> Ingreso correcto!!</div>
-		<h2>Sign in</h2>
-		
-		<label for="username" >Usuario</label> 
-			<input type="text" id="username" name="username"
-				placeholder="Username" /> 
-		<label for="password">Contraseña</label>
-			<input type="password" id="password"  name="password"
-				placeholder="Password" />
-		<button type="submit">
-			<span aria-hidden="true"></span>
-			Sign in
-		</button>
-	</form>
+	<div id="Presentacion">
+		<img src="Imagenes/receta.jpg" th:src="@{/imgs/receta.jpg}" width="60"
+			height="57" alt="logo" />
+		<h1>Caserita Peru</h1>
+		<h2>Descubre recetas con sabor peruano</h2>
+	</div>
 
+	<div id="login-datos">
+		<form th:action="@{/loginCheck}" method="POST">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}">
+			<div th:if="${error != null}">Usuario Invalido</div>
+<!-- 			<div th:if="${logout != null}">Ingreso correcto!!</div> -->
+
+			<label for="username">Usuario:</label>
+			<br>
+			<input type="text" id="username"
+				name="username" placeholder="Usuario" required="required"/>
+			<p> <br> </p>
+			<label for="password">Contraseña:</label>
+			<br>
+			<input type="password" id="password" name="password"
+				placeholder="Contraseña" required="required" /> 
+			<p> <br> </p>
+			<button type="submit" id="btnIngresar">
+				<span aria-hidden="true"></span> Ingresar
+			</button>
+			
+		</form>
+	</div>
+	
+	<div class="social-icon">
+		<p>
+			<label>O conectate con:</label>
+		</p>
+		<a href="" class="social-icon__link"><span class="icon-facebook"></span></a>
+		<a href="" class="social-icon__link"><span class="icon-twitter"></span></a>
+		<a href="" class="social-icon__link"><span class="icon-google"></span></a>
+	</div>
+	
+	<div id="registrar"> 
+	  <p id="bot">
+	  <input type="submit" id="submit" name="submit" value="Crear cuenta" class="boton">
+	  </p>
+
+	 </div>
+	
 </body>
 </html>

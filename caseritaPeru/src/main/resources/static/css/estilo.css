@@ -1,0 +1,130 @@
+
+html,body{
+	margin	0;
+	padding 0;
+	background-image: url("/imgs/fondo.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+    font-family: Kotta One;
+}
+
+#Presentacion{
+	position: absolute;
+	top: 52%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width:50%;
+}
+h1{
+       
+    font-style: normal;
+	font-weight: bold;
+	font-size: 4em;
+	line-height: 50px;
+	color: #FFFFFF;
+    margin: 20 10;
+    text-align: center;
+    justify-content: center;
+}
+
+h2{
+    font-size: 28;
+    font-style: normal;
+	font-weight: normal;
+    color: #FFFFFF;
+    margin: auto 0;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#login-datos{
+        
+        width: 400;
+        height: auto;
+        position: absolute;
+        top: 20%;
+        left: 70%;
+        text-align: center;
+        transform: translateX(-50%) translatey(-10%)
+}
+
+label{
+    
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 10px;
+	color: #000000;
+   
+}
+
+#Email{
+    width: 50%;
+    height: 25;    
+}
+
+
+#contrasenia{
+    width: 50%;
+    height: 25;    
+}
+
+#submit{
+    width: 40%;
+    height: 30; 
+    background: black;
+    color:white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+
+.social-icon{
+        width: 400;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        text-align: center;
+        transform: translateX(-50%) translatey(-10%)
+}
+
+.social-icon [class*="icon-"]{
+    margin-left: 10px;
+    justify-content: center;
+    align-content: center;
+    font-size: 2.8em;
+    border-radius: 50%;
+    text-decoration: none;
+    
+}
+
+.social-icon__link{
+    text-decoration: none;
+    
+}
+
+.social-icon [class*="icon-facebook"]{
+    color:#3b5998;
+    
+}
+
+.social-icon [class*="icon-twitter"]{
+    color:#00acee;
+}
+
+.social-icon [class*="icon-google"]{
+    color:#db4a39;
+}
+
+#registrar{
+        width: 500;
+        height: auto;
+        position: absolute;
+        top: 68%;
+        left: 70%;
+        text-align: center;
+        transform: translateX(-50%) translatey(-10%)
+}

@@ -3,6 +3,7 @@ package com.grupo04.caseritaPeru.controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,7 +41,10 @@ public class LoginController {
 	}
 	
 	@GetMapping("/principal")
-	public String principalFRM() {
+	public String principalFRM(Model model) {
+		User usuario = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		
+		model.addAttribute("usuario", usuario.getUsername());
 		return ViewConstant.PRINCIPAL_FORM;
 	}
 	
