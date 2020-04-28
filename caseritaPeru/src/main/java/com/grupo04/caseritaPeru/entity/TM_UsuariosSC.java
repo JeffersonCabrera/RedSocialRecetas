@@ -140,7 +140,7 @@ public class TM_UsuariosSC {
 	public String toString() {
 		return "TM_UsuariosSC [id=" + id + ", fecha_registro=" + fecha_registro + ", usuario=" + usuario
 				+ ", contraseña=" + contraseña + ", usuario_full=" + usuario_full + ", email=" + email + ", nerror="
-				+ nerror + ", estado=" + estado + ", userRole=" + userRole + "]";
+				+ nerror + ", estado=" + estado;
 	}
 	
 	

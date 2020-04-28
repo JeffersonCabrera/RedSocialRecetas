@@ -4,5 +4,6 @@ public class ViewConstant {
 
 	public static final String LOGIN_FORM ="login";
 	public static final String PRINCIPAL_FORM ="principal";
+	public static final String REGISTRO_FORM ="registroUsu";
 	
 }

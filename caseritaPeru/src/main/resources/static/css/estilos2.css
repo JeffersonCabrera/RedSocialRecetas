@@ -105,6 +105,17 @@ ul{
     font-weight: bold;
 }
 
+#btnCerrarSe li>a{
+  
+      font-family: calibri light;
+    color: white;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+      min-width: 100px;
+    font-weight: bold;
+}
+
 #btnmenu li>a:hover{
   color: #DE423A;
   background-color: #eaeaea;

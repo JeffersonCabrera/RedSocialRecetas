@@ -14,24 +14,30 @@
 			</div>
 
 		</div>
-
+		
 		<div class="main-header__infousuario column column--50">
-			<span>Bienvenido:</span><br /> <span th:text="${usuario}">Nombre de Usuario</span>
-		</div>
-
+	
+			<span>Bienvenido:</span><br /> <span th:text="${usuario}">Nombre de Usuario</span><br>
+			
+		</div>  
+			 
 	</header>
 
 	<div class="linea_roja">
 
 		<div class="main-header__busqueda column column--50">
-			<div class="barra_buscador" method="get" action="" target="_blank">
+			<div class="barra_buscador" >
 				<input type="search" name="buscar" placeholder="Encuentra tu receta"
 					autofocus required> <input type="submit" value="Buscar">
+			 <form th:action="@{/logout}"   method="POST"> 	
+				<input type="submit"value="Cerrar Sesión"  id="btnCerrarSe" />  
+			</form>
 			</div>
 		</div>
+			
 
 	</div>
-
+<br>
 	<nav class="main-nav">
 		<div class="container container--flex">
 			<ul class="menu" id="btnmenu">
@@ -43,9 +49,8 @@
 						<li><a href="">Postre</a></li>
 					</ul></li>
 				<li class="menu__item"><a href="" class="menu__link">Preguntas</a></li>
-				<li class="menu__item"><a href="" class="menu__link">Consejos</a></li>
-				<li class="menu__item"><a href="" class="menu__link">Cerrar
-						Sesi&oacute;n</a></li>
+				<li class="menu__item"><a href="" class="menu__link">Consejos</a></li> 
+				  
 			</ul>
 		</div>
 	</nav>

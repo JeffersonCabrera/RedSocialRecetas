@@ -32,6 +32,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		LOG.info("configure : http authorizeRequests() -- " + http.authorizeRequests().toString());
 		 http.authorizeRequests()
 			 	.antMatchers("/css/*","/imgs/*","/fonts/*").permitAll()
+			 	.antMatchers("/addUsuFrm").permitAll()
+			 	.antMatchers("/addUsu").permitAll()
 			 	.anyRequest().authenticated()
 			 	.and()
 		 	.formLogin().loginPage("/login").loginProcessingUrl("/loginCheck")
@@ -39,6 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		 	.defaultSuccessUrl("/loginsuccess").permitAll()
 		 	.and()
 		 	.logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout")
-		 	.permitAll();
+		 	.permitAll()
+		 	 ;
 	}
 }
